@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--   member 모든 게시물을 전달 -->
+<mapper namespace="com.example.board.mapper.MemberMapper">
+
+    <select id="selectLogin" resultType="com.example.board.vo.Member">
+        select * from member where USERID=#{userId} and PASSWORD=#{password}
+    </select>
+
+</mapper>
